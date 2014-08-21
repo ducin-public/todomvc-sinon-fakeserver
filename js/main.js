@@ -15,17 +15,12 @@ require.config({
 				'jquery'
 			],
 			exports: 'Backbone'
-		},
-		backboneLocalstorage: {
-			deps: ['backbone'],
-			exports: 'Store'
 		}
 	},
 	paths: {
 		jquery: '../bower_components/jquery/jquery',
 		underscore: '../bower_components/underscore/underscore',
 		backbone: '../bower_components/backbone/backbone',
-		backboneLocalstorage: '../bower_components/backbone.localStorage/backbone.localStorage',
 		text: '../bower_components/requirejs-text/text'
 	}
 });
@@ -33,12 +28,14 @@ require.config({
 require([
 	'backbone',
 	'views/app',
-	'routers/router'
-], function (Backbone, AppView, Workspace) {
+	'routers/router',
+	'fake'
+], function (Backbone, AppView, Workspace, Fake) {
 	/*jshint nonew:false*/
 	// Initialize routing and start Backbone.history()
 	new Workspace();
 	Backbone.history.start();
+	Fake.init();
 
 	// Initialize the application view
 	new AppView();

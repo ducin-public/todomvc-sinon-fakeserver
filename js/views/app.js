@@ -28,8 +28,7 @@ define([
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
-		// collection, when items are added or changed. Kick things off by
-		// loading any preexisting todos that might be saved in *localStorage*.
+		// collection, when items are added or changed.s
 		initialize: function () {
 			this.allCheckbox = this.$('#toggle-all')[0];
 			this.$input = this.$('#new-todo');
@@ -103,8 +102,7 @@ define([
 			};
 		},
 
-		// If you hit return in the main input field, create new **Todo** model,
-		// persisting it to *localStorage*.
+		// If you hit return in the main input field, create new **Todo** model
 		createOnEnter: function (e) {
 			if (e.which !== Common.ENTER_KEY || !this.$input.val().trim()) {
 				return;
