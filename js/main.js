@@ -15,13 +15,17 @@ require.config({
 				'jquery'
 			],
 			exports: 'Backbone'
+		},
+		sinon: {
+			exports: 'sinon'
 		}
 	},
 	paths: {
 		jquery: '../bower_components/jquery/jquery',
 		underscore: '../bower_components/underscore/underscore',
 		backbone: '../bower_components/backbone/backbone',
-		text: '../bower_components/requirejs-text/text'
+		text: '../bower_components/requirejs-text/text',
+		sinon: '../bower_components/sinon/sinon'
 	}
 });
 

@@ -10,6 +10,8 @@ define([
 		// Reference to this collection's model.
 		model: Todo,
 
+		url: 'http://api.todomvc.com/todo',
+
 		// Filter down the list of all todo items that are finished.
 		completed: function () {
 			return this.where({completed: true});

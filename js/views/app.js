@@ -42,7 +42,11 @@ define([
 			this.listenTo(Todos, 'filter', this.filterAll);
 			this.listenTo(Todos, 'all', this.render);
 
-			Todos.fetch({reset:true});
+			Todos.fetch({reset:true}).done(function(){
+				Todos.each(function(item){
+					item.set('order', Todos.nextOrder());
+				});
+			});
 		},
 
 		// Re-rendering the App just means refreshing the statistics -- the rest
