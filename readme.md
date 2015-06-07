@@ -1,4 +1,4 @@
-check out [live demo](http://tkoomzaaskz.github.io/todomvc-sinon-fakeserver/) of sinon fake server. Below is original TodoMVC readme.
+check out [live demo](http://ducin.github.io/todomvc-sinon-fakeserver/) of sinon fake server. Below is original TodoMVC readme.
 
 ----
 
